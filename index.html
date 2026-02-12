@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ff4e50, #fc913a, #f9d423, #e55d87);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 800px;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 60px;
+  letter-spacing: 2px;
+  animation: fadeIn 2s ease forwards;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 22px;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+}
+
+button {
+  margin-top: 40px;
+  padding: 15px 35px;
+  font-size: 18px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  background: white;
+  color: #e55d87;
+}
+
+#message {
+  display: none;
+  margin-top: 40px;
+  font-size: 22px;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.final {
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Happy Birthday</h1>
+  <div class="subtitle">A special day for someone truly special.</div>
+
+  <button onclick="showMessage()">Open</button>
+
+  <div id="message">
+    <p>
+      May this year bring clarity, strength, success, and happiness into your life.  
+      Keep shining. Keep growing. Keep being amazing.
+    </p>
+
+    <div class="final">Love You Muddu ❤️</div>
+  </div>
+</div>
+
+<script>
+function showMessage() {
+  document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
